@@ -1,2 +1,5 @@
-npm -i
+npm install
+
+
+
 npm run build
