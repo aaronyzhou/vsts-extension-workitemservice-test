@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>TypeScript HTML App</title>
+    <link rel="stylesheet" href="css/app.css" type="text/css" />
+    <script src="../lib/VSS.SDK.min.js"></script>
+    
+</head>
+<body>
+    <script type="text/javascript">
+        // Initialize the VSS sdk
+        VSS.init({
+            explicitNotifyLoaded: true,
+            usePlatformScripts: true,
+            configureModuleLoader: true
+        });
+
+        // Wait for the SDK to be initialized
+        VSS.require(["dist/app"], function (app) {
+            VSS.notifyLoadSucceeded();}
+        );
+
+    </script>
+
+    <div id="content"></div>
+    <input id="in"></input>
+    <button id="button">set assigned to</button>
+    <button id="abc">abc</button>
+</body>
+</html>
